@@ -5,7 +5,7 @@ COPY . .
 
 RUN go mod download
 RUN go vet -v
-RUN go test -v
+RUN go test -v *.go
 
 RUN CGO_ENABLED=0 go build -o /go/bin/app
 
